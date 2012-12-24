@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Wed Dec 19 11:02:19 EET 2012:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-013b-b266-2e3d-000002c9eef0 
+on database directory C:\Users\Peter.Gashenko\Documents\WSPACE\sam-server\target\test  with class loader sun.misc.Launcher$AppClassLoader@208c5a4f 
+Loaded from file:/C:/Users/Peter.Gashenko/.m2/repository/org/apache/derby/derby/10.8.1.2/derby-10.8.1.2.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_09-b05
+user.dir=C:\Users\Peter.Gashenko\Documents\WSPACE\sam-server
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

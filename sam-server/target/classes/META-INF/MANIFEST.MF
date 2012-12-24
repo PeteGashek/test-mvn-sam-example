@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1355991402624
+Build-Jdk: 1.7.0_09
+Built-By: Peter.Gashenko
+Bundle-Description: Talend ESB SE bundles Service Factory and Integratio
+ n Factory,        Service Locator, Service Activity Monitoring and a de
+ mo application        to a stable, production ready distribution based 
+ on the industry leading        open source frameworks Apache CXF and Ap
+ ache Camel.        It includes Web Service support based on JAX-WS and 
+ enables simple and scalable        message based systems using well kno
+ wn Enterprise Integration Patterns.        The Service Locator maintain
+ s a repository of service endpoints which        can be used by Service
+  Consumers to support simple failover and load        balancing scenari
+ os. Service Activity Monitoring allows to log and        monitor servic
+ e calls. A documented Car Rental demo application illustrates        ho
+ w to use these features.
+Bundle-DocURL: www.talend.com
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Service Activity Monitoring :: Server
+Bundle-SymbolicName: sam-server
+Bundle-Vendor: Talend Inc.
+Bundle-Version: 5.3.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.talend.esb.sam.server.persistence;version="5.3.0.SNA
+ PSHOT",org.talend.esb.sam.server.persistence.criterias;version="5.3.0.S
+ NAPSHOT",org.talend.esb.sam.server.persistence.dialects;version="5.3.0.
+ SNAPSHOT",org.talend.esb.sam.server.service;version="5.3.0.SNAPSHOT",or
+ g.talend.esb.sam.server.ui;version="5.3.0.SNAPSHOT",org.talend.esb.sam.
+ server.ui.servlets;version="5.3.0.SNAPSHOT"
+Export-Service: javax.servlet.http.HttpServlet;alias="/sam-server-war/ap
+ i/v1.0/event",javax.servlet.http.HttpServlet;alias="/sam-server-war",ja
+ vax.servlet.http.HttpServlet;alias="/sam-server-war/api/v1.0/flow",java
+ x.servlet.http.HttpServlet;alias="/sam-server-war/api/v1.0/list"
+Import-Package: com.google.gson;version="[1.7,2)",com.ibatis.common.jdbc
+ ;version="[2.3,3)",javax.activation,javax.servlet,javax.servlet.http,ja
+ vax.sql,javax.xml.datatype,javax.xml.namespace,org.apache.cxf.feature;v
+ ersion="[2.7,3)",org.apache.cxf.helpers;version="[2.7,3)",org.osgi.serv
+ ice.blueprint;version="[1.0.0,2.0.0)",org.springframework.beans.factory
+ ;version="[3.0,4)",org.springframework.beans.factory.annotation;version
+ ="[3.0,4)",org.springframework.jdbc.core;version="[3.0,4)",org.springfr
+ amework.jdbc.core.namedparam;version="[3.0,4)",org.springframework.jdbc
+ .core.simple;version="[3.0,4)",org.springframework.jdbc.support.increme
+ nter;version="[3.0,4)",org.springframework.web.context;version="[3.0,4)
+ ",org.springframework.web.context.support;version="[3.0,4)",org.talend.
+ esb.sam._2011._03.common;version="[5.3,6)",org.talend.esb.sam.common.ev
+ ent;version="[5.3,6)",org.talend.esb.sam.common.event.persistence;versi
+ on="[5.3,6)",org.talend.esb.sam.common.service;version="[5.3,6)",org.ta
+ lend.esb.sam.common.spi;version="[5.3,6)",org.talend.esb.sam.monitoring
+ service.v1;version="[5.3,6)"
+Import-Service: org.talend.esb.sam.server.ui.UIProvider;multiple:=false
+Require-Bundle: org.apache.cxf.bundle,org.springframework.beans,org.spri
+ ngframework.jdbc,org.apache.commons.dbcp
+Tool: Bnd-1.50.0
