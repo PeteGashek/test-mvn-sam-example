@@ -1,5 +1,10 @@
 test-mvn-sam-example
 ======================
+bat-for-karaf
+====================
+Different .bat files for cleaning up karaf.
+
+-----------------------------------------------------------------
 sam-server
 ====================
 Fork to original sam-server with working recreate parameter.
