@@ -1,10 +1,3 @@
-###############################################################################
-#
-# Test example readme
-# 
-#
-#
-###############################################################################
 test-mvn-sam-example
 ======================
 
@@ -21,11 +14,11 @@ Agent Installation in a Servlet container
 ====================
 
 Add it to the classpath using a Maven dependency:
-<dependency>
-    <groupId>org.talend.esb</groupId>
-    <artifactId>sam-agent</artifactId>
-    <version>{talend esb version}</version>
-</dependency>
+			<dependency>
+   		 <groupId>org.talend.esb</groupId>
+    		<artifactId>sam-agent</artifactId>
+   		 <version>{talend esb version}</version>
+			</dependency>
 
 Add it to the Spring context:
 <import resource="classpath:agent-context.xml" />
