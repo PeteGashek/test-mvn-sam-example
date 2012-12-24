@@ -1,7 +1,6 @@
 test-mvn-sam-example
 ======================
 
-
 recoString
 ====================
 
@@ -10,74 +9,76 @@ The folowing steps will show how connect your own service with sam . If you want
 go straight to "Running the example" chapter. 
 
 
-Agent Installation in a Servlet container
-====================
+#Agent Installation in a Servlet container
+
+
 
 Add it to the classpath using a Maven dependency:
-			<dependency>
-   		 <groupId>org.talend.esb</groupId>
-    		<artifactId>sam-agent</artifactId>
-   		 <version>{talend esb version}</version>
-			</dependency>
+  
+
+        <dependency> 
+        <groupId>org.talend.esb</groupId>
+	<version>{talend esb version}</version>
+        </dependency>
 
 Add it to the Spring context:
-<import resource="classpath:agent-context.xml" />
+
+        <import resource="classpath:agent-context.xml" />
 
 Then, add the Agent as a jaxws:features to the endpoint/client for Spring-related services, for example:
-<jaxws:endpoint
+
+        <jaxws:endpoint
     id="customerService" address="/CustomerServicePort" 
     implementor="com.example.customerservice.server.CustomerServiceImpl"> 
     <jaxws:features>
         <ref bean="eventFeature"/>
     </jaxws:features>
-</jaxws:endpoint>
+        </jaxws:endpoint>
 
-Configurating
-====================
+#Configurating
+
 Next in folder \service\src\main\resources create two files :
-agent.properties 
-logging.properties
+
+        agent.properties 
+        logging.properties
 And configurate them :
 
-For agent
--------------------------------
-collector.scheduler.interval=500
-collector.maxEventsPerCall=10
-collector.lifecycleEvent=false
+#For agent
 
-log.messageContent=true
-log.maxContentLength=-1
-log.enforceMessageIDTransfer=false
+        collector.scheduler.interval=500
+        collector.maxEventsPerCall=10
+        collector.lifecycleEvent=false
 
-service.url=http://localhost:8040/services/MonitoringServiceSOAP
-service.retry.number=3
-service.retry.delay=5000
+        log.messageContent=true
+        log.maxContentLength=-1
+        log.enforceMessageIDTransfer=false
 
-For logging
--------------------------------
-handlers = java.util.logging.ConsoleHandler, java.util.logging.FileHandler 
+        service.url=http://localhost:8040/services/MonitoringServiceSOAP
+        service.retry.number=3
+        service.retry.delay=5000
 
-# Set the default logging level for the root logger 
-.level = WARNING 
+#For logging
 
-# Set the default logging level for new ConsoleHandler instances 
-java.util.logging.ConsoleHandler.level = INFO 
+        handlers = java.util.logging.ConsoleHandler, java.util.logging.FileHandler 
 
-# Set the default logging level for new FileHandler instances 
-java.util.logging.FileHandler.level = ALL 
 
-# Set the default formatter for new ConsoleHandler instances 
-#java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter 
-java.util.logging.ConsoleHandler.formatter = org.sopera.monitoring.util.CustomLogFormatter
+        .level = WARNING 
 
-# Set the default logging level for the logger named com.mycompany 
-#org.talend.esb.sam.level = FINE 
-#org.eclipse.persistence.level = INFO
-org.talend.esb.sam.level = WARNING 
-org.eclipse.persistence.level = WARNING
 
-Running the example
-====================
+        java.util.logging.ConsoleHandler.level = INFO 
+
+
+        java.util.logging.FileHandler.level = ALL 
+
+
+        java.util.logging.ConsoleHandler.formatter = org.sopera.monitoring.util.CustomLogFormatter
+
+
+        org.talend.esb.sam.level = WARNING 
+        org.eclipse.persistence.level = WARNING
+
+#Running the example
+
 
 - Start karaf with sam-server and connected datasource . 
 - Deploy recoString.war into Tomcat . 
