@@ -43,7 +43,7 @@ Next in folder \service\src\main\resources create two files :
         logging.properties
 And configurate them :
 
-#For agent
+For agent:
 
         collector.scheduler.interval=500
         collector.maxEventsPerCall=10
@@ -57,7 +57,7 @@ And configurate them :
         service.retry.number=3
         service.retry.delay=5000
 
-#For logging
+For logging:
 
         handlers = java.util.logging.ConsoleHandler, java.util.logging.FileHandler 
 
