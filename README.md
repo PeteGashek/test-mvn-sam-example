@@ -32,7 +32,7 @@ Add it to the classpath using a Maven dependency:
 
 Add it to the Spring context:
 
-        <import resource="classpath:agent-context.xml" />
+        <import resource="classpath:META-INF/tesb/agent-context.xml" />
 
 Then, add the Agent as a jaxws:features to the endpoint/client for Spring-related services, for example:
 
