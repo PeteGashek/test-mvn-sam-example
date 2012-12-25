@@ -5,7 +5,7 @@ bat-for-karaf
 Different .bat files for cleaning up karaf.
 
 -----------------------------------------------------------------
-sam-server
+sam-server and sam-common
 ====================
 Fork to original sam-server with working recreate parameter.
 
