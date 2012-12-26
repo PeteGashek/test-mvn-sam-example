@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Export-Package: service;uses:="javax.jws";version="1.0.0.SNAPSHOT"
+Built-By: Peter.Gashenko
+Tool: Bnd-1.43.0
+Bundle-Name: -- recoString Web Provider
+Created-By: Apache Maven Bundle Plugin
+Require-Bundle: org.apache.cxf.bundle,org.springframework.beans
+Build-Jdk: 1.7.0_09
+Bundle-Version: 1.0.0.SNAPSHOT
+Bnd-LastModified: 1356526010127
+Bundle-ManifestVersion: 2
+Import-Package: javax.jws,javax.xml.bind.annotation,javax.xml.namespac
+ e,javax.xml.ws,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Bundle-SymbolicName: reco-String-service
+

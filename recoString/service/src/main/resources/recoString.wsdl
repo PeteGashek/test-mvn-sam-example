@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="recoString"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:di="http://www.example.org/schema/recoString"
+    xmlns:tns="http://www.example.org/contract/recoString"
+    targetNamespace="http://www.example.org/contract/recoString">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://www.example.org/schema/recoString">
+            <xsd:element name="recoString">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="inputString"
+                            type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="recoStringResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="responseString"
+                            type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="recoStringRequest">
+        <wsdl:part element="di:recoString" name="parameters" />
+    </wsdl:message>
+    <wsdl:message name="recoStringResponse">
+        <wsdl:part element="di:recoStringResponse" name="parameters" />
+    </wsdl:message>
+    <wsdl:portType name="recoStringPortType">
+        <wsdl:operation name="recoString">
+            <wsdl:input message="tns:recoStringRequest" />
+            <wsdl:output message="tns:recoStringResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="recoStringBinding" type="tns:recoStringPortType">
+        <soap:binding style="document"
+            transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="recoString">
+            <soap:operation soapAction="" />
+            <wsdl:input>
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="recoStringService">
+        <wsdl:port name="recoStringPort" binding="tns:recoStringBinding">
+            <soap:address
+                location="http://localhost:8040/services/recoString?wsdl" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions> 
