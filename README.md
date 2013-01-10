@@ -85,6 +85,7 @@ For logging:
 
         org.talend.esb.sam.level = WARNING 
         org.eclipse.persistence.level = WARNING
+        
 
 #Running the example
 
@@ -92,3 +93,11 @@ For logging:
 - Start karaf with sam-server and connected datasource . 
 - Deploy recoString.war into Tomcat . 
 - With soapUI create request and type the string .
+
+To run the client you need to cd into client directory and type in console :
+
+
+        mvn exec:java 
+  
+        
+
