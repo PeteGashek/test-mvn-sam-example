@@ -38,10 +38,10 @@ public class recoStringPortTypeImpl implements RecoStringPortType {
         //
         Matcher m = p.matcher(URL);
         boolean b = m.matches();
-        if (b == true)// BFault
-        {
-            throw new RuntimeException("URL type Exeption");
-        }
+        //if (b == true)// BFault
+        //{
+            //throw new RuntimeException("URL type Exeption");
+        //}
         return b;
     }
 
