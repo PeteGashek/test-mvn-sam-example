@@ -2,10 +2,10 @@
     xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:context="http://www.springframework.org/schema/context"
     xmlns:util="http://www.springframework.org/schema/util"
     xsi:schemaLocation="
-    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
-    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
-    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
     <import resource="classpath:META-INF/tesb/agent-context.xml" />
     <import resource="classpath:META-INF/cxf/cxf.xml" />
@@ -13,6 +13,7 @@
         <property name="bus" ref="cxf" />
         <property name="usePlatformMBeanServer" value="true" />
         <property name="enabled" value="true" />
+        <property name="persistentBusId" value="rSt123456789" />
     </bean>
 
     <bean id="CounterRepository" class="org.apache.cxf.management.counters.CounterRepository">
