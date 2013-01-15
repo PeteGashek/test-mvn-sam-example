@@ -1,5 +1,5 @@
 test-mvn-sam-example
-======================
+====================
 bat-for-karaf
 ====================
 Different .bat files for cleaning up karaf.
